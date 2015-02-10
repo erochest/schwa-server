@@ -32,7 +32,8 @@ run:
 # generate executable and put it into `/usr/local`
 
 deploy:
-	git push openshift
+	git checkout master
+	git push openshift master
 
 hlint:
 	hlint *.hs src specs
