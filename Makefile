@@ -54,4 +54,8 @@ restart: clean init build
 
 rebuild: clean configure build
 
+stackage:
+	curl 'http://www.stackage.org/snapshot/nightly-'`date "+%Y-%m-%d"`'/cabal.config?download=true' > cabal.config
+	cabal update
+
 .PHONY: all init test run clean configure deps build rebuild hlint
