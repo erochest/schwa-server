@@ -33,7 +33,7 @@ run:
 
 deploy:
 	git checkout master
-	git push openshift master
+	git push -f openshift master
 
 hlint:
 	hlint *.hs src specs
