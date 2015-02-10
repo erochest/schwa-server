@@ -30,9 +30,9 @@ run:
 #
 # install:
 # generate executable and put it into `/usr/local`
-#
-# deploy:
-# prep and push
+
+deploy:
+	git push openshift
 
 hlint:
 	hlint *.hs src specs
