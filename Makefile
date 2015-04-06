@@ -41,11 +41,14 @@ hlint:
 clean:
 	${CABAL} clean
 
+distclean: clean
+
 configure: clean
 	yesod configure ${FLAGS}
 
 deps: clean
 	${CABAL} install --only-dependencies --allow-newer ${FLAGS}
+	${CABAL} install yesod-bin
 	make configure
 
 build:
